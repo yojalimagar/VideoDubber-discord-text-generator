@@ -1,4 +1,4 @@
-import { useRef, forwardRef } from 'react'; // Added forwardRef
+import { useRef, forwardRef } from 'react';
 import { Center, Button, Box } from '@mantine/core';
 
 const TextEditor = forwardRef(({ copyToClipboard, nodesToANSI, copyCount, clipboard }, ref) => {
@@ -19,7 +19,6 @@ const TextEditor = forwardRef(({ copyToClipboard, nodesToANSI, copyCount, clipbo
     Array(16).fill(0).reduce((p) => p + String.fromCharCode(Math.floor(Math.random() * 65535)), ''),
   ];
 
-  // Merge internal ref with forwarded ref
   const setRef = (node) => {
     textAreaRef.current = node;
     if (ref) {
@@ -32,24 +31,27 @@ const TextEditor = forwardRef(({ copyToClipboard, nodesToANSI, copyCount, clipbo
     <>
       <Center>
         <Box
-          ref={setRef} // Changed to use merged ref
+          ref={setRef}
           contentEditable
           suppressContentEditableWarning
+          className="custom-text-editor" // Unique class
           sx={{
-            width: 600,
-            minHeight: 200,
-            borderRadius: 5,
-            padding: 80,
-            backgroundColor: '#2F3136',
-            color: '#B9BBBE',
-            border: '3px solid #202225',
+            width: '1400px',
+            minHeight: '200px',
+            backgroundColor: '#0D1117',
+            color: '#FFFFFF',
+            border: '2px solid #30363D',
+            borderRadius: '6px',
+            padding: '10px',
             fontFamily: 'monospace',
-            whiteSpace: 'pre-wrap',
-            fontSize: '0.875rem',
-            lineHeight: '1.125rem',
-            outline: 'none',
+            fontSize: '16px',
+            lineHeight: '1.5',
             resize: 'both',
+            outline: 'none',
+            boxSizing: 'border-box',
+            whiteSpace: 'pre-wrap',
             overflow: 'auto',
+            boxShadow: 'inset 0 1px 2px rgba(0, 0, 0, 0.1)',
           }}
           dangerouslySetInnerHTML={{ __html: "Welcome to Rebane's Discord Colored Text Generator!" }}
           onKeyDown={(e) => {
