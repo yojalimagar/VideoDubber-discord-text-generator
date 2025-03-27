@@ -1,0 +1,5 @@
+body {
+  background-color:  #36393F; /* Light gray - adjust the hex value as needed */
+  margin: 0; /* Remove default margin */
+  min-height: 100vh; /* Ensure it covers the full viewport */
+}

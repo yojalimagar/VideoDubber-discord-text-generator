@@ -1,0 +1,26 @@
+/* ANSI foreground colors */
+*{
+  color: white;
+}
+.ansi-30 { color: #4f545c; } /* Dark Gray */
+.ansi-31 { color: #dc322f; } /* Red */
+.ansi-32 { color: #859900; } /* Yellowish Green */
+.ansi-33 { color: #b58900; } /* Gold */
+.ansi-34 { color: #268bd2; } /* Light Blue */
+.ansi-35 { color: #d33682; } /* Pink */
+.ansi-36 { color: #2aa198; } /* Teal */
+.ansi-37 { color: #ffffff; } /* White */
+
+/* ANSI background colors */
+.ansi-40 { background-color: #002b36; } /* Blueish Black */
+.ansi-41 { background-color: #cb4b16; } /* Rust Brown */
+.ansi-42 { background-color: #586e75; } /* Gray (40%) */
+.ansi-43 { background-color: #657b83; } /* Gray (45%) */
+.ansi-44 { background-color: #839496; } /* Light Gray (55%) */
+.ansi-45 { background-color: #6c71c4; } /* Blurple */
+.ansi-46 { background-color: #93a1a1; } /* Light Gray (60%) */
+.ansi-47 { background-color: #fdf6e3; } /* Cream White */
+
+/* ANSI text styles */
+.ansi-1 { font-weight: 700; } /* Bold */
+.ansi-4 { text-decoration: underline; } /* Underline */
